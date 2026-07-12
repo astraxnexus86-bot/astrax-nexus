@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard — AstraX Nexus Admin</title>
+  <meta name="description" content="AstraX Nexus admin dashboard preview." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#09090B" />
+  <link rel="icon" href="assets/images/logo.png" type="image/png" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+  <div id="dashboard-auth-overlay"
+    style="position:fixed; inset:0; z-index:9999; display:flex; align-items:center; justify-content:center; padding:1.5rem; background:rgba(4,4,8,0.94); backdrop-filter:blur(10px);">
+    <div class="glass" style="width:min(100%, 420px); padding:1.5rem; border-radius:18px;">
+      <div class="eyebrow">Restricted Area</div>
+      <h2 style="margin:0.5rem 0 0.75rem; font-size:1.75rem">Founder Access Only</h2>
+      <p style="margin:0 0 1rem; color:var(--muted)">Enter the shared password to open the dashboard.</p>
+      <form id="dashboard-auth-form" novalidate>
+        <label for="dashboard-password" style="display:block; margin-bottom:0.5rem; font-weight:600">Password</label>
+        <input id="dashboard-password" type="password" autocomplete="off" required
+          style="width:100%; padding:0.85rem 1rem; border-radius:12px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:var(--text); margin-bottom:0.9rem">
+        <button type="submit" class="btn btn-ghost-gold" style="width:100%">Unlock Dashboard</button>
+      </form>
+      <p id="dashboard-auth-error" style="margin-top:0.9rem; color:#ffb4b4; display:none">Incorrect password. Please try
+        again.</p>
+    </div>
+  </div>
+
+  <div id="dashboard-content" style="display:none">
+    <div id="site-nav"></div>
+    <div id="site-breadcrumbs"></div>
+
+    <main class="container-x" style="padding: 2.5rem 0 4rem">
+      <div class="section-heading">
+        <div class="eyebrow">Admin</div>
+        <h2>Dashboard</h2>
+        <p>Preview of the admin surface — coming soon.</p>
+      </div>
+
+      <div class="dash-grid">
+        <aside class="glass dash-nav" id="dash-nav">
+          <button class="active" data-tab="overview">▤ Overview</button>
+          <button data-tab="projects">🔧 Projects</button>
+          <button data-tab="gallery">🖼 Gallery</button>
+          <button data-tab="services">⚙ Services</button>
+          <button data-tab="pricing">💲 Pricing</button>
+          <button data-tab="testimonials">★ Testimonials</button>
+          <button data-tab="messages">✉ Messages</button>
+        </aside>
+
+        <div>
+          <div class="dash-panel" data-tab="overview">
+            <div class="kpi-grid">
+              <div class="glass kpi">
+                <div class="kpi-top">Active Projects <span style="color:var(--gold)">▲</span></div>
+                <p class="kpi-val gold-text">12</p>
+              </div>
+              <div class="glass kpi">
+                <div class="kpi-top">New Messages <span style="color:var(--gold)">✉</span></div>
+                <p class="kpi-val gold-text">8</p>
+              </div>
+              <div class="glass kpi">
+                <div class="kpi-top">Total Clients <span style="color:var(--gold)">◉</span></div>
+                <p class="kpi-val gold-text">32</p>
+              </div>
+              <div class="glass kpi">
+                <div class="kpi-top">Revenue (MTD) <span style="color:var(--gold)">↗</span></div>
+                <p class="kpi-val gold-text">R48k</p>
+              </div>
+            </div>
+            <div class="glass activity">
+              <h3 style="font-size:1.05rem; font-weight:600">Recent activity</h3>
+              <ul style="margin-top:0.75rem">
+                <li><span>New contact from Sipho M.</span><span style="font-size:0.75rem">1h ago</span></li>
+                <li><span>Portfolio project 'Kanto' updated</span><span style="font-size:0.75rem">2h ago</span></li>
+                <li><span>Invoice paid — Sable Estates</span><span style="font-size:0.75rem">3h ago</span></li>
+                <li><span>AI assistant deployed for AutoLoop</span><span style="font-size:0.75rem">4h ago</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="dash-panel" data-tab="projects" style="display:none">
+            <div class="glass-gold cta-card">
+              <h2 style="font-size:1.5rem">Projects management</h2>
+              <p>This module is prepared with reusable components and ready for backend integration.</p><button
+                class="btn btn-ghost-gold">Coming soon</button>
+            </div>
+          </div>
+          <div class="dash-panel" data-tab="gallery" style="display:none">
+            <div class="glass-gold cta-card">
+              <h2 style="font-size:1.5rem">Gallery management</h2>
+              <p>This module is prepared with reusable components and ready for backend integration.</p><button
+                class="btn btn-ghost-gold">Coming soon</button>
+            </div>
+          </div>
+          <div class="dash-panel" data-tab="services" style="display:none">
+            <div class="glass-gold cta-card">
+              <h2 style="font-size:1.5rem">Services management</h2>
+              <p>This module is prepared with reusable components and ready for backend integration.</p><button
+                class="btn btn-ghost-gold">Coming soon</button>
+            </div>
+          </div>
+          <div class="dash-panel" data-tab="pricing" style="display:none">
+            <div class="glass-gold cta-card">
+              <h2 style="font-size:1.5rem">Pricing management</h2>
+              <p>This module is prepared with reusable components and ready for backend integration.</p><button
+                class="btn btn-ghost-gold">Coming soon</button>
+            </div>
+          </div>
+          <div class="dash-panel" data-tab="testimonials" style="display:none">
+            <div class="glass-gold cta-card">
+              <h2 style="font-size:1.5rem">Testimonials management</h2>
+              <p>This module is prepared with reusable components and ready for backend integration.</p><button
+                class="btn btn-ghost-gold">Coming soon</button>
+            </div>
+          </div>
+          <div class="dash-panel" data-tab="messages" style="display:none">
+            <div class="glass-gold cta-card">
+              <h2 style="font-size:1.5rem">Messages management</h2>
+              <p>This module is prepared with reusable components and ready for backend integration.</p><button
+                class="btn btn-ghost-gold">Coming soon</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="site-footer"></div>
+    <div id="site-chat"></div>
+  </div>
+
+  <script src="assets/js/chatbot.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      const authOverlay = document.getElementById('dashboard-auth-overlay');
+      const authContent = document.getElementById('dashboard-content');
+      const authForm = document.getElementById('dashboard-auth-form');
+      const authInput = document.getElementById('dashboard-password');
+      const authError = document.getElementById('dashboard-auth-error');
+      const correctPassword = 'Nexi';
+      const storageKey = 'astrax-dashboard-auth';
+
+      function unlockDashboard() {
+        authOverlay.style.display = 'none';
+        authContent.style.display = 'block';
+        sessionStorage.setItem(storageKey, 'granted');
+      }
+
+      if (sessionStorage.getItem(storageKey) === 'granted') {
+        unlockDashboard();
+      }
+
+      authForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const submittedPassword = authInput.value.trim().toLowerCase();
+        const expectedPassword = correctPassword.toLowerCase();
+
+        if (submittedPassword === expectedPassword) {
+          unlockDashboard();
+          return;
+        }
+
+        authError.style.display = 'block';
+        authInput.value = '';
+        authInput.focus();
+      });
+    })();
+  </script>
+</body>
+
+</html>
